@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirect all requests to route.php except for actual files or directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ route.php [L]
